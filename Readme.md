@@ -1,9 +1,11 @@
 # About
-Latest version of my CV, typesetted in Helvetica and using colors inspired by Monokai (there is an `print` option which renders in black and white, and reverts the header to dark on light, if printing on paper is needed).
+A version of Adrien Friggeri's CV, typesetted in Helvetica and using colors inspired by Monokai (there is an `print` option which renders in black and white, and reverts the header to dark on light, if printing on paper is needed).
 
 Uses TikZ for the header, XeTeX and fontspec to use Helvetica Neue, biblatex to print my publications and textpos for the aside.
 
+Altered for changes made to XeTeX, and to include a cover letter in the same style as friggeri-cv.
 
+Run with xelatex. If header fails to appear to appear in resultant pdf, rerun xelatex.
 # License
 
 Copyright (C) 2012, Adrien Friggeri
