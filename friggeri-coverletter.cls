@@ -130,7 +130,7 @@
   \@address%
   \vspace{2.5em}
   
-  \@ifundefined{\@last}{To Whom It May Concern}{Dear \@salutation~\@last},\\%
+  \@ifundefined{\@last}{To Whom It May Concern:}{Dear \@salutation~\@last,}\\%
   \endgroup
   \vspace{.5em}
 }
