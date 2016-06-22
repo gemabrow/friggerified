@@ -121,33 +121,31 @@
   \end{tikzpicture}
   \vspace{3cm}
   \vspace{-2\parskip}\\
+  \today\vspace{3em}\\
   %%%%%%%%%%%%%
   %  Address  %
   %%%%%%%%%%%%%
   \begingroup%
-  %\@ifundefined{\@salutation}{}{\@salutation~\@first\ \@last,\ \@title}\hfill\today\\%
-  {\raggedleft \today\\}
+  %\@ifundefined{\@salutation}{}{\@salutation~\@first\ \@last,\ \@title}%
   \@address%
-  \vspace{2.5em}
+  \vspace{3em}%
   
-  \@ifundefined{\@last}{To Whom It May Concern:}{Dear \@salutation~\@last,}\\%
+  \@ifundefined{\@last}{To Whom It May Concern:}{Dear \@salutation~\@last,}%
   \endgroup
-  \vspace{.5em}
+  \vspace{1.5em}
 }
 
 %%%%%%%%%%%%%
 % Structure %
 %%%%%%%%%%%%%
-
 \usepackage{setspace}
 \newenvironment*{bp}{\begin{singlespace}}{\end{singlespace}\vspace{1.5em}}
-
 \pagestyle{empty}
 
 \newcommand*{\closing}[1][Sincerely]{
 {#1},%
 
-\vspace{2em}
+\vspace{3em}
 \@myfirst\ \@mylast
 }
 %%%%%%%%%%%%%%%%%%%%
