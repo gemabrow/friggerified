@@ -49,12 +49,12 @@
 \RequirePackage[quiet]{fontspec}
 \RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
 
-\newfontfamily\bodyfont[]{Helvetica Neue LT Std}
-\newfontfamily\thinfont[]{Helvetica Neue LT Std 35 Thin}
-\newfontfamily\headingfont[]{Helvetica Neue LT Std 77 Bold Condensed}
+\newfontfamily\bodyfont[]{Helvetica Neue}
+\newfontfamily\thinfont[]{HelveticaNeue-UltraLight}
+\newfontfamily\headingfont[]{HelveticaNeue-BoldCond}
 
 \defaultfontfeatures{Mapping=tex-text}
-\setmainfont[Mapping=tex-text, Color=textcolor]{Helvetica Neue LT Std 35 Thin}
+\setmainfont[Mapping=tex-text, Color=textcolor]{HelveticaNeue-Light}
 
 \setmathfont
 [    Extension = .otf,
@@ -68,9 +68,9 @@
 \RequirePackage{tikz}
 
 \newcommand{\rolefont}{%
-  \fontsize{14pt}{24pt}\selectfont%
+  \fontsize{10pt}{12pt}\selectfont%
   \thinfont%
-  \color{white}%
+  \color{black}%
 }
 
 \newcommand{\header}[3]{%
