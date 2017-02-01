@@ -49,12 +49,15 @@
 \RequirePackage[quiet]{fontspec}
 \RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
 
-\newfontfamily\bodyfont[]{Helvetica Neue}
-\newfontfamily\thinfont[]{HelveticaNeue-UltraLight}
-\newfontfamily\headingfont[]{HelveticaNeue-BoldCond}
+% Helvetica Neue
+% HelveticaNeue-BoldCond
+\newfontfamily\bodyfont[Path=./.fonts/]{HelveticaNeueLTStd-Roman}
+\newfontfamily\thinfont[Path=./.fonts/]{HelveticaNeueLTStd-Lt}
+\newfontfamily\headingfont[Path=./.fonts/]{HelveticaNeueLTStd-BdCn}
 
+% prev: HelveticaNeue-Light
 \defaultfontfeatures{Mapping=tex-text}
-\setmainfont[Mapping=tex-text, Color=textcolor]{HelveticaNeue-Light}
+\setmainfont[Mapping=tex-text, Color=textcolor, Path=./.fonts/]{HelveticaNeueLTStd-Lt}
 
 \setmathfont
 [    Extension = .otf,
