@@ -50,7 +50,7 @@
 \RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
 
 % if ./fonts not installed system-wide, or locally, address using "Paths" args
-% \newfontfamily\bodyfont[Path=./.fonts/]{Helvetica Neue}
+% \newfontfamily\bodyfont[Path=./fonts/]{Helvetica Neue}
 \newfontfamily\bodyfont[]{Helvetica Neue}
 % Helvetica Neue Thin
 \newfontfamily\thinfont[UprightFont={* Thin}]{Helvetica Neue}

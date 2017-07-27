@@ -44,7 +44,7 @@
 %%%%%%%%%
 % Fonts %
 %%%%%%%%%
-
+%TODO: Update font families on lines 51-54, 57
 \RequirePackage[quiet]{fontspec}
 \RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
 
