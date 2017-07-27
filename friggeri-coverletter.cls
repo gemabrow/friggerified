@@ -48,13 +48,13 @@
 \RequirePackage[quiet]{fontspec}
 \RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
 
-\newfontfamily\bodyfont[]{Helvetica Neue LT Std}
-\newfontfamily\addressfont[]{Helvetica Neue LT Std 35 Thin}
-\newfontfamily\thinfont[]{Helvetica Neue LT Std 35 Thin}
-\newfontfamily\headingfont[]{Helvetica Neue LT Std 77 Bold Condensed}
+\newfontfamily\bodyfont[]{Helvetica Neue}
+\newfontfamily\addressfont[]{HelveticaNeue-Light}
+\newfontfamily\thinfont[]{HelveticaNeue-Light}
+\newfontfamily\headingfont[]{HelveticaNeue-BoldCond}
 
 \defaultfontfeatures{Mapping=tex-text}
-\setmainfont[Mapping=tex-text, Color=textcolor]{Helvetica Neue LT Std 35 Thin}
+\setmainfont[Mapping=tex-text, Color=textcolor]{HelveticaNeue-Light}
 
 \setmathfont
 [    Extension = .otf,

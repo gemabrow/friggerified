@@ -50,11 +50,11 @@
 \RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
 
 \newfontfamily\bodyfont[]{Helvetica Neue}
-\newfontfamily\thinfont[]{HelveticaNeue-UltraLight}
-\newfontfamily\headingfont[]{HelveticaNeue-BoldCond}
+\newfontfamily\thinfont[UprightFont={* Thin}]{Helvetica Neue}
+\newfontfamily\headingfont[UprightFont={* Condensed Bold}]{Helvetica Neue}
 
 \defaultfontfeatures{Mapping=tex-text}
-\setmainfont[Mapping=tex-text, Color=textcolor]{HelveticaNeue-Light}
+\setmainfont[Mapping=tex-text, Color=textcolor, UprightFont={* Light}]{Helvetica Neue}
 
 \setmathfont
 [    Extension = .otf,
