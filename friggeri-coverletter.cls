@@ -44,17 +44,27 @@
 %%%%%%%%%
 % Fonts %
 %%%%%%%%%
-%TODO: Update font families on lines 51-54, 57
 \RequirePackage[quiet]{fontspec}
 \RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
-
+%
+% if using fonts in ./fonts subdirectory, use "Paths" arg
+% e.g.: \newfontfamily\bodyfont[Path=./fonts/]{Helvetica Neue}
+%
+% if font is otherwise installed system-wide, omit "Paths" arg
 \newfontfamily\bodyfont[]{Helvetica Neue}
-\newfontfamily\addressfont[]{HelveticaNeue-Light}
-\newfontfamily\thinfont[]{HelveticaNeue-Light}
-\newfontfamily\headingfont[]{HelveticaNeue-BoldCond}
-
+%
+% Helvetica Neue Light
+\newfontfamily\addressfont[UprightFont={* Light}]{Helvetica Neue}
+%
+% Helvetica Neue Light
+\newfontfamily\thinfont[UprightFont={* Light}]{Helvetica Neue}
+%
+% Helvetica Neue Bold Condensed
+\newfontfamily\headingfont[UprightFont={* Condensed Bold}]{Helvetica Neue}
 \defaultfontfeatures{Mapping=tex-text}
-\setmainfont[Mapping=tex-text, Color=textcolor]{HelveticaNeue-Light}
+%
+% Helvetica Neue Light
+\setmainfont[Mapping=tex-text, Color=textcolor, UprightFont={* Light}]{Helvetica Neue}
 
 \setmathfont
 [    Extension = .otf,

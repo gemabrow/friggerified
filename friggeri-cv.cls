@@ -49,10 +49,10 @@
 \RequirePackage[quiet]{fontspec}
 \RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
 
-% if using fonts in ./fonts subdirectory, use "Paths" arg below
+% if using fonts in ./fonts subdirectory, use "Paths" arg
 % \newfontfamily\bodyfont[Path=./fonts/]{Helvetica Neue}
 %
-% if font is installed system-wide, omit "Paths" arg
+% if font is otherwise installed system-wide, omit "Paths" arg
 \newfontfamily\bodyfont[]{Helvetica Neue}
 %
 % Helvetica Neue Thin
@@ -61,7 +61,7 @@
 % Helvetica Neue Bold Condensed
 \newfontfamily\headingfont[UprightFont={* Condensed Bold}]{Helvetica Neue}
 %
-% prev: HelveticaNeue-Light
+% Helvetica Neue Light
 \defaultfontfeatures{Mapping=tex-text}
 \setmainfont[Mapping=tex-text, Color=textcolor, UprightFont={* Light}]{Helvetica Neue}
 
