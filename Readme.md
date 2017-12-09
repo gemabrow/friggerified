@@ -9,11 +9,11 @@ Based on
 [//]: # (print publications and textpos for the aside.)
 
 ## Additions by gemabrow
-* Updated frigerri-cv.cls for updates made to XeTeX
-* Created frigerri-cover\_letter.cls for similarly stylized cover letters
+* Updated friggeri-cv.cls for updates made to XeTeX
+* Created friggeri-cover\_letter.cls for similarly stylized cover letters
 
 # Usage
-For a friggerri-cv document, set document class with
+For a friggeri-cv document, set document class with
 ```
 \documentclass[]{./friggeri-cv}
 ```
