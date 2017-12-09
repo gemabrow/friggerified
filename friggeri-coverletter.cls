@@ -8,6 +8,7 @@
 \ProcessOptions\relax
 \LoadClass{article}
 
+
 %%%%%%%%%%
 % Colors %
 %%%%%%%%%%
@@ -44,33 +45,37 @@
 %%%%%%%%%
 % Fonts %
 %%%%%%%%%
+
 \RequirePackage[quiet]{fontspec}
 \RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
-%
+
 % if using fonts in ./fonts subdirectory, use "Paths" arg
 % e.g.: \newfontfamily\bodyfont[Path=./fonts/]{Helvetica Neue}
+% if font is installed system-wide, omit "Paths" arg
 %
-% if font is otherwise installed system-wide, omit "Paths" arg
+% '\bodyfont'       =        Helvetica Neue
 \newfontfamily\bodyfont[]{Helvetica Neue}
 %
-% Helvetica Neue Light
+% '\addressfont'    =        Helvetica Neue Light
 \newfontfamily\addressfont[UprightFont={* Light}]{Helvetica Neue}
 %
-% Helvetica Neue Light
-\newfontfamily\thinfont[UprightFont={* Light}]{Helvetica Neue}
+% '\thinfont'       =        Helvetica Neue Thin 
+\newfontfamily\thinfont[UprightFont={* Thin}]{Helvetica Neue}
 %
-% Helvetica Neue Bold Condensed
+% '\headingfont'    =        Helvetica Neue Condensed Bold 
 \newfontfamily\headingfont[UprightFont={* Condensed Bold}]{Helvetica Neue}
-\defaultfontfeatures{Mapping=tex-text}
 %
-% Helvetica Neue Light
-\setmainfont[Mapping=tex-text, Color=textcolor, UprightFont={* Light}]{Helvetica Neue}
+\defaultfontfeatures{Mapping=tex-text}
+% main font         =        Helvetica Neue Light
+\setmainfont[Mapping=tex-text,%
+               Color=textcolor,%
+               UprightFont={* Light}]%
+            {Helvetica Neue}
 
 \setmathfont
 [    Extension = .otf,
       BoldFont = *bold,
 ]{xits-math}
-\setlength\parindent{0pt}
 
 %%%%%%%%%%
 % Header %
@@ -107,18 +112,21 @@
 
 \RequirePackage{tikz}
 
-\newcommand{\rolefont}{%
-  \fontsize{14pt}{24pt}\selectfont%
-  \thinfont%
-  \color{white}%
-}
+% \newcommand{\rolefont}{%
+%   \fontsize{14pt}{24pt}\selectfont%
+%   \thinfont%
+%   \color{white}%
+% }
+\setlength\parindent{0pt}
 
 \newcommand{\letterheader}{%
   \begin{tikzpicture}[remember picture,overlay]
-    \node [rectangle, fill=fillheader, anchor=north, minimum width=\paperwidth, minimum height=4cm] (box) at (current page.north){};
+    \node [rectangle, fill=fillheader, anchor=north,%
+           minimum width=\paperwidth, minimum height=4cm]%
+          (box) at (current page.north){};
     \node [anchor=center] (name) at (box) {%
       \fontsize{36pt}{48pt}\color{header}%
-      {\thinfont \MakeLowercase{\@myfirst}}{\bodyfont \MakeLowercase{\@mylast}}
+      \thinfont {\MakeLowercase{\@myfirst}}{\bodyfont \MakeLowercase{\@mylast}}
     };
     \node [anchor=north] (street) at (name.south) {%
       \fontsize{14pt}{0pt}\color{header}%
