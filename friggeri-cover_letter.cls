@@ -1,4 +1,4 @@
-\ProvidesClass{friggeri-coverletter}[2012/04/30 CV class]
+\ProvidesClass{friggeri-cover_letter}[2012/04/30 CV class]
 \NeedsTeXFormat{LaTeX2e}
 
 \DeclareOption{print}{\def\@cv@print{}}
@@ -169,22 +169,22 @@
 %%%%%%%%%%%%%%%%%%%%
 % List environment %
 %%%%%%%%%%%%%%%%%%%%
-
-\setlength{\tabcolsep}{0pt}
-\newenvironment{entrylist}{%
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
-}{%
-  \end{tabular*}
-}
-\renewcommand{\bfseries}{\headingfont\color{headercolor}}
-\newcommand{\entry}[4]{%
-  #1&\parbox[t]{11.8cm}{%
-    \textbf{#2}%
-    \hfill%
-    {\footnotesize\addfontfeature{Color=lightgray} #3}\\%
-    #4\vspace{\parsep}%
-  }\\}
-  
+% 
+% \setlength{\tabcolsep}{0pt}
+% \newenvironment{entrylist}{%
+%   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
+% }{%
+%   \end{tabular*}
+% }
+% \renewcommand{\bfseries}{\headingfont\color{headercolor}}
+% \newcommand{\entry}[4]{%
+%   #1&\parbox[t]{11.8cm}{%
+%     \textbf{#2}%
+%     \hfill%
+%     {\footnotesize\addfontfeature{Color=lightgray} #3}\\%
+%     #4\vspace{\parsep}%
+%   }\\}
+%   
 %%%%%%%%%%%%%%%%
 % Other tweaks %
 %%%%%%%%%%%%%%%%
