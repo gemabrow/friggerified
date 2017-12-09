@@ -51,19 +51,23 @@
 
 % if using fonts in ./fonts subdirectory, use "Paths" arg
 % \newfontfamily\bodyfont[Path=./fonts/]{Helvetica Neue}
+% if font is installed system-wide, omit "Paths" arg
 %
-% if font is otherwise installed system-wide, omit "Paths" arg
+% '\bodyfont'       =        Helvetica Neue
 \newfontfamily\bodyfont[]{Helvetica Neue}
 %
-% Helvetica Neue Thin
+% '\thinfont'       =        Helvetica Neue Thin 
 \newfontfamily\thinfont[UprightFont={* Thin}]{Helvetica Neue}
 %
-% Helvetica Neue Bold Condensed
+% '\headingfont'    =        Helvetica Neue Condensed Bold 
 \newfontfamily\headingfont[UprightFont={* Condensed Bold}]{Helvetica Neue}
 %
-% Helvetica Neue Light
 \defaultfontfeatures{Mapping=tex-text}
-\setmainfont[Mapping=tex-text, Color=textcolor, UprightFont={* Light}]{Helvetica Neue}
+% main font         =        Helvetica Neue Light
+\setmainfont[Mapping=tex-text,%
+               Color=textcolor,%
+               UprightFont={* Light}]%
+            {Helvetica Neue}
 
 \setmathfont
 [    Extension = .otf,
