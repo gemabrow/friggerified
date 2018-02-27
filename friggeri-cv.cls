@@ -47,27 +47,30 @@
 %%%%%%%%%
 
 \RequirePackage[quiet]{fontspec}
-\RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
+\RequirePackage{unicode-math}
 
 % if using fonts in ./fonts subdirectory, use "Paths" arg
-% \newfontfamily\bodyfont[Path=./fonts/]{Helvetica Neue}
+% \newfontfamily\bodyfont[Path=./fonts/overpass]{Overpass}
 % if font is installed system-wide, omit "Paths" arg
 %
-% '\bodyfont'       =        Helvetica Neue
-\newfontfamily\bodyfont[]{Helvetica Neue}
+% '\bodyfont'       =        Overpass Regular
+\newfontfamily\bodyfont[UprightFont={* Regular}]{Overpass}
 %
-% '\thinfont'       =        Helvetica Neue Thin 
-\newfontfamily\thinfont[UprightFont={* Thin}]{Helvetica Neue}
+% '\addressfont'    =        Overpass Light
+\newfontfamily\addressfont[UprightFont={* Light}]{Overpass}
 %
-% '\headingfont'    =        Helvetica Neue Condensed Bold 
-\newfontfamily\headingfont[UprightFont={* Condensed Bold}]{Helvetica Neue}
+% '\thinfont'       =        Overpass Thin
+\newfontfamily\thinfont[UprightFont={* Thin}]{Overpass}
+%
+% '\headingfont'    =        Overpass ExtraBold
+\newfontfamily\headingfont[UprightFont={* ExtraBold}]{Overpass}
 %
 \defaultfontfeatures{Mapping=tex-text}
-% main font         =        Helvetica Neue Light
+% main font         =        Overpass Light
 \setmainfont[Mapping=tex-text,%
                Color=textcolor,%
                UprightFont={* Light}]%
-            {Helvetica Neue}
+            {Overpass}
 
 \setmathfont
 [    Extension = .otf,
