@@ -68,9 +68,10 @@
 \defaultfontfeatures{Mapping=tex-text}
 % main font         =        Overpass Light
 \setmainfont[Mapping=tex-text,%
-               Color=textcolor,%
-               UprightFont={* Light}]%
-            {Overpass}
+             Color=textcolor,%
+             Scale=1.2,%
+             UprightFont={* Light}]%
+			 {Overpass}
 
 \setmathfont
 [    Extension = .otf,
@@ -121,19 +122,19 @@
            minimum width=\paperwidth, minimum height=4cm]%
           (box) at (current page.north){};
     \node [anchor=center] (name) at (box) {%
-      \fontsize{40pt}{0pt}\color{header}%
-      \thinfont {\MakeLowercase{\@myfirst}}{\bodyfont \MakeLowercase{\@mylast}}
+        \fontsize{40pt}{0pt}\color{header}%
+        \thinfont {\MakeLowercase{\@myfirst}}{\bodyfont \MakeLowercase{\@mylast}}
     };
-    \node [anchor=north,yshift=0.5em] (myaddr) at (name.south) {%
-      \fontsize{10pt}{12pt}\color{header}%
-      \thinfont \@myaddr%
+    \node [anchor=north,yshift=-0.05em] (myaddr) at (name.south) {%
+        \fontsize{12pt}{12pt}\color{header}%
+        \thinfont \@myaddr%
     };
-    \node [anchor=north,yshift=0.25em] (contactinfo) at (myaddr.south) {%
-      \fontsize{10pt}{10pt}\color{header}%
-      \thinfont%
-	  $\circ$ phone: \@phone%
-	  \hspace{.8em}%
-	  $\circ$ email: \@email%
+    \node [anchor=north,yshift=0.45em] (contactinfo) at (myaddr.south) {%
+        \fontsize{12pt}{12pt}\color{header}%
+        \thinfont%
+	    $\circ$ phone: \@phone%
+	    \hspace{.5em}%
+	    $\circ$ email: \@email%
     };
   \end{tikzpicture}%
   \vspace{1.25in}%
@@ -145,16 +146,17 @@
   % Recipient %
   %%%%%%%%%%%%%
   \begingroup%
-  \@ifundefined{@honorific}{}{\@honorific~\@first\ \@last%
-                               \newline%
-							   \@title%
-							   \newline}%
+  \@ifundefined{@honorific}{}%
+        {\@honorific~\@first\ \@last%
+         \newline%
+	     \@title%
+	     \newline}%
   \@address%
   \vspace{1em}%
   
   \@ifundefined{@last}%
-               {To Whom It May Concern:}%
-			   {Dear \@honorific~\@last,}
+        {To Whom It May Concern:}%
+        {Dear \@honorific~\@last,}%
   \endgroup
 }
 
@@ -170,13 +172,13 @@
 
 \@myfirst\ \@mylast
 }
-   
+
 %%%%%%%%%%%%%%%%
 % Other tweaks %
 %%%%%%%%%%%%%%%%
 \RequirePackage[left=2.54cm,%
                 top=2cm,%
-				right=2.54cm,%
-				bottom=2.54cm,%
+	            right=2.54cm,%
+	            bottom=2.54cm,%
                 nohead,nofoot]{geometry}
 \RequirePackage{hyperref}
