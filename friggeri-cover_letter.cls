@@ -123,17 +123,18 @@
       \thinfont {\MakeLowercase{\@myfirst}}{\bodyfont \MakeLowercase{\@mylast}}
     };
     \node [anchor=north,yshift=0.5em] (street) at (name.south) {%
-      \fontsize{14pt}{0pt}\color{header}%
+      \fontsize{14pt}{14pt}\color{header}%
       \thinfont \@addr%
     };
     \node [anchor=north,yshift=0.25em] (city) at (street.south) {%
-      \fontsize{14pt}{0pt}\color{header}%
+      \fontsize{14pt}{14pt}\color{header}%
       \thinfont \@cityst%
     };
-  \end{tikzpicture}
-  \vspace{9em}
-  \vspace{-2\parskip}\\
-  \today\vspace{2em}
+  \end{tikzpicture}%
+  \vspace{1.25in}%
+  
+  \today%
+  \vspace{2em}%
 
   %%%%%%%%%%%%%
   % Recipient %
@@ -159,9 +160,10 @@
 \pagestyle{empty}
 
 \newcommand*{\closing}[1][Sincerely]{
+\vspace{1em}
 {#1},%
+\vspace{1em}
 
-\vspace{2em}
 \@myfirst\ \@mylast
 }
    
