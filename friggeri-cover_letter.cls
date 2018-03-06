@@ -94,7 +94,7 @@
 
 
 \newcommand{\contact}[4]{%
-  \def\@salutation{#1}%
+  \def\@honorific{#1}%
   \def\@first{#2}%
   \def\@last{#3}%
   \def\@title{#4}%
@@ -111,12 +111,6 @@
 }
 
 \RequirePackage{tikz}
-
-% \newcommand{\rolefont}{%
-%   \fontsize{14pt}{24pt}\selectfont%
-%   \thinfont%
-%   \color{white}%
-% }
 \setlength\parindent{0pt}
 
 \newcommand{\letterheader}{%
@@ -137,61 +131,46 @@
       \thinfont \@cityst%
     };
   \end{tikzpicture}
-  \vspace{3cm}
+  \vspace{9em}
   \vspace{-2\parskip}\\
-  \today\vspace{3em}\\
+  \today\vspace{2em}
 
   %%%%%%%%%%%%%
   % Recipient %
   %%%%%%%%%%%%%
   \begingroup%
-  \@ifundefined{@salutation}{}{\@salutation~\@first\ \@last,%
+  \@ifundefined{@honorific}{}{\@honorific~\@first\ \@last%
                                \newline%
 							   \@title%
 							   \newline}%
   \@address%
-  \vspace{3em}%
+  \vspace{2em}%
   
-  \@ifundefined{@last}{To Whom It May Concern:}{Dear \@salutation~\@last,}%
+  \@ifundefined{@last}{To Whom It May Concern:}{Dear \@honorific~\@last,}%
   \endgroup
-  \vspace{1.5em}
+  \vspace{1em}
 }
 
 %%%%%%%%%%%%%
 % Structure %
 %%%%%%%%%%%%%
 \usepackage{setspace}
-\newenvironment*{bp}{\begin{singlespace}}{\end{singlespace}\vspace{1.5em}}
+\newenvironment*{bp}{\begin{singlespace}}{\end{singlespace}\vspace{1em}}
 \pagestyle{empty}
 
 \newcommand*{\closing}[1][Sincerely]{
 {#1},%
 
-\vspace{3em}
+\vspace{2em}
 \@myfirst\ \@mylast
 }
-%%%%%%%%%%%%%%%%%%%%
-% List environment %
-%%%%%%%%%%%%%%%%%%%%
-% 
-% \setlength{\tabcolsep}{0pt}
-% \newenvironment{entrylist}{%
-%   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
-% }{%
-%   \end{tabular*}
-% }
-% \renewcommand{\bfseries}{\headingfont\color{headercolor}}
-% \newcommand{\entry}[4]{%
-%   #1&\parbox[t]{11.8cm}{%
-%     \textbf{#2}%
-%     \hfill%
-%     {\footnotesize\addfontfeature{Color=lightgray} #3}\\%
-%     #4\vspace{\parsep}%
-%   }\\}
-%   
+   
 %%%%%%%%%%%%%%%%
 % Other tweaks %
 %%%%%%%%%%%%%%%%
-
-\RequirePackage[left=2.54cm,top=2cm,right=2.54cm,bottom=2.54cm,nohead,nofoot]{geometry}
+\RequirePackage[left=2.54cm,%
+                top=2cm,%
+				right=2.54cm,%
+				bottom=2.54cm,%
+                nohead,nofoot]{geometry}
 \RequirePackage{hyperref}
