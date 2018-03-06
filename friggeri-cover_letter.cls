@@ -140,15 +140,19 @@
   \vspace{3cm}
   \vspace{-2\parskip}\\
   \today\vspace{3em}\\
+
   %%%%%%%%%%%%%
-  %  Address  %
+  % Recipient %
   %%%%%%%%%%%%%
   \begingroup%
-  %\@ifundefined{\@salutation}{}{\@salutation~\@first\ \@last,\ \@title}%
+  \@ifundefined{@salutation}{}{\@salutation~\@first\ \@last,%
+                               \newline%
+							   \@title%
+							   \newline}%
   \@address%
   \vspace{3em}%
   
-  \@ifundefined{\@last}{To Whom It May Concern:}{Dear \@salutation~\@last,}%
+  \@ifundefined{@last}{To Whom It May Concern:}{Dear \@salutation~\@last,}%
   \endgroup
   \vspace{1.5em}
 }
