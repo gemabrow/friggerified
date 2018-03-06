@@ -82,14 +82,16 @@
 %%%%%%%%%%
 \def\@myfirst{ }
 \def\@mylast{ }
-\def\@addr{ }
-\def\@cityst{ }
+\def\@myaddr{ }
+\def\@phone{ }
+\def\@email{ }
 
-\newcommand{\personalinfo}[4]{%
+\newcommand{\personalinfo}[5]{%
   \def\@myfirst{#1}%
   \def\@mylast{#2}%
-  \def\@addr{#3}%
-  \def\@cityst{#4}%
+  \def\@myaddr{#3}%
+  \def\@phone{#4}%
+  \def\@email{#5}%
 }
 
 
@@ -122,19 +124,22 @@
       \fontsize{40pt}{0pt}\color{header}%
       \thinfont {\MakeLowercase{\@myfirst}}{\bodyfont \MakeLowercase{\@mylast}}
     };
-    \node [anchor=north,yshift=0.5em] (street) at (name.south) {%
-      \fontsize{14pt}{14pt}\color{header}%
-      \thinfont \@addr%
+    \node [anchor=north,yshift=0.5em] (myaddr) at (name.south) {%
+      \fontsize{10pt}{12pt}\color{header}%
+      \thinfont \@myaddr%
     };
-    \node [anchor=north,yshift=0.25em] (city) at (street.south) {%
-      \fontsize{14pt}{14pt}\color{header}%
-      \thinfont \@cityst%
+    \node [anchor=north,yshift=0.25em] (contactinfo) at (myaddr.south) {%
+      \fontsize{10pt}{10pt}\color{header}%
+      \thinfont%
+	  $\circ$ phone: \@phone%
+	  \hspace{.8em}%
+	  $\circ$ email: \@email%
     };
   \end{tikzpicture}%
   \vspace{1.25in}%
   
   \today%
-  \vspace{2em}%
+  \vspace{1em}%
 
   %%%%%%%%%%%%%
   % Recipient %
@@ -145,24 +150,23 @@
 							   \@title%
 							   \newline}%
   \@address%
-  \vspace{2em}%
+  \vspace{1em}%
   
-  \@ifundefined{@last}{To Whom It May Concern:}{Dear \@honorific~\@last,}%
+  \@ifundefined{@last}%
+               {To Whom It May Concern:}%
+			   {Dear \@honorific~\@last,}
   \endgroup
-  \vspace{1em}
 }
 
 %%%%%%%%%%%%%
 % Structure %
 %%%%%%%%%%%%%
-\usepackage{setspace}
-\newenvironment*{bp}{\begin{singlespace}}{\end{singlespace}\vspace{1em}}
-\pagestyle{empty}
+%\usepackage{setspace}
+%\pagestyle{empty}
+\setlength\parskip{1em}
 
 \newcommand*{\closing}[1][Sincerely]{
-\vspace{1em}
 {#1},%
-\vspace{1em}
 
 \@myfirst\ \@mylast
 }
