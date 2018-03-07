@@ -136,7 +136,7 @@
 	    $\circ$ email: \@email%
     };
   \end{tikzpicture}%
-  \vspace{.8in}%
+  \vspace{2.1cm}%
   
   %%%%%%%%%%%%%
   % Recipient %
