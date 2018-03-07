@@ -69,7 +69,6 @@
 % main font         =        Overpass Light
 \setmainfont[Mapping=tex-text,%
              Color=textcolor,%
-             Scale=1.2,%
              UprightFont={* Light}]%
 			 {Overpass}
 
@@ -137,22 +136,21 @@
 	    $\circ$ email: \@email%
     };
   \end{tikzpicture}%
-  \vspace{1.25in}%
+  \vspace{.75in}%
   
-  \today%
-  \vspace{1em}%
-
   %%%%%%%%%%%%%
   % Recipient %
   %%%%%%%%%%%%%
   \begingroup%
+  \today%
+  \newline%
+  \newline%
   \@ifundefined{@honorific}{}%
         {\@honorific~\@first\ \@last%
          \newline%
 	     \@title%
 	     \newline}%
   \@address%
-  \vspace{1em}%
   
   \@ifundefined{@last}%
         {To Whom It May Concern:}%
@@ -164,7 +162,7 @@
 % Structure %
 %%%%%%%%%%%%%
 %\usepackage{setspace}
-%\pagestyle{empty}
+\pagestyle{empty}
 \setlength\parskip{1em}
 
 \newcommand*{\closing}[1][Sincerely]{
