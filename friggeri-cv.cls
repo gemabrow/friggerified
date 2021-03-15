@@ -71,10 +71,10 @@
                UprightFont={* Light}]%
             {Overpass}
 
-\setmathfont
-[    Extension = .otf,
-      BoldFont = *bold,
-]{xits-math}
+% \setmathfont
+% [    Extension = .otf,
+%       BoldFont = * Bold,
+% ]{XITS Math}
 
 %%%%%%%%%%
 % Header %
